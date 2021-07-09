@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #ff9966; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9966, #ff5e62); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9966, #ff5e62); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 20px 20px 0 rgb(135 34 34 / 70%);
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.music-img{
+    position: relative;
+}
+.music-img img{
+    width: 100px;
+    height: 100px;
+   border-radius: 50%;
+   justify-self: baseline;
+   position: absolute;
+   bottom: 15px;
+   right: -20px;
+
+   animation: rotate 3s linear infinite;
+   animation-play-state: paused;
+}
+.music-img{
+    position: relative;
+}
+.music-img::after{
+    content: '';
+    background-color: rgb(104, 221, 250);
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 20px;
+   bottom: 50px;
+   border-radius: 50%;
+}
+.moving{
+    animation-play-state: running;
+} 
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+.action-btn{
+    margin: 10px;
+    padding: 0px 2px;
+    border-style: none;
+    background-color: white;
+    color: rgb(136, 127, 127);
+    padding: 10px 25px;
+}
+
+.action-btn-big{
+    font-size: 17px;
+}
+
+h2{
+    margin-bottom: 60px;
+}
+.after-play{
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 15px 15px 0px 0px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    width: 300px;
+    padding: 10px 10px 10px 100px;
+    transform: translateyY(0%);
+    opacity: 0;
+}
+
+.after-play h4{
+    margin: 0;
+}
+
+.container.play .after-play{
+    opacity: 1;
+    transform: translateY(-100%);
+}

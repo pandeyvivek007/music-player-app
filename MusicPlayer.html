@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="MusicPlayer.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <h2>Pandey Player</h2>
+    <div class="container play">
+        <!-- <div class="after-play play ">
+            <h4 id="title" >Ye kaha aa gae</h4>
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+        </div> -->
+        <audio src="music/silsila.mp3" class="audio"></audio>
+        <div class="music-img">
+            <img src="image/silsila.jpg" alt="ye" >
+            <span class="hole">
+
+            </span>
+        </div>
+        <div class="navigetion">
+            <button id="prev" class="action-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn-big action-btn">
+                <i class="fas fa-play" id="playBtn"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fas fa-forward" ></i>
+            </button>
+        </div>
+    </div>
+    <script src="/MusicPlayer.js"></script>
+</body>
+</html>
